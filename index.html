@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+ 
+  </head>
+
+  <body>
+  <div class="main">
+
+      <div id="section">
+          <div id="h1_mobile">
+
+            <h1> Inflación en Argentina </h1>   
+          </div>
+
+          <div id="chart">
+          <canvas id="myChart" ></canvas>
+          </div>
+  </div>
+
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById("myChart").getContext('2d');
+
+ 
+		var gradientRed = ctx.createLinearGradient(0, 0, 0, 600);
+		    gradientRed.addColorStop(0.5, 'rgba(255,71,66,0.125)');	 
+		    gradientRed.addColorStop(1, 'rgba(255,71,66,0)');
+
+const myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+        datasets: [{
+            label: 'Inflación por mes',
+            data: [3.9, 4.7, 6.7, 6, 5.1, 5.3, 7.4, 7, 6.2, 6.5, 6, 6],
+            backgroundColor: gradientRed,
+            borderColor: '#2bde73',
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+
+ 
+  </body>
+</html>
