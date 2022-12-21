@@ -20,43 +20,33 @@
             <h1> Improve your Twitter </h1>   
           </div>
 
-          <div id="chart">
-          <canvas id="myChart" ></canvas>
+          <div id="h2_items">
+           <h2> Courses </h2> 
+          </div>
+
+
+          <div id="Courses">
+
+            <div class="link">  
+              <a href="https://gumroad.com/a/195482739/XFFpt"> The Art of Twitter: Build a Business That Makes You $100/Day</a>
+              </div>
+          
+            <div class="link">  
+            <a href="https://gumroad.com/a/659530963/mvdpph">Twitter Growth Playbook </a>
+          </div>
+
+
+            <div class="link">  
+            <a href="https://gumroad.com/a/676934867/gizjqw">Twitter Growth School: Grow your Twitter Business from 0 to 100k Twitter followers</a>
+          </div>
+
           </div>
   </div>
 
   </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-const ctx = document.getElementById("myChart").getContext('2d');
+    <script></script>
 
- 
-		var gradientRed = ctx.createLinearGradient(0, 0, 0, 600);
-		    gradientRed.addColorStop(0.5, 'rgba(255,71,66,0.125)');	 
-		    gradientRed.addColorStop(1, 'rgba(255,71,66,0)');
-
-const myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-        datasets: [{
-            label: 'Inflación por mes',
-            data: [3.9, 4.7, 6.7, 6, 5.1, 5.3, 7.4, 7, 6.2, 6.5, 6, 6],
-            backgroundColor: gradientRed,
-            borderColor: '#2bde73',
-            borderWidth: 2
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-</script>
 
  
   </body>
